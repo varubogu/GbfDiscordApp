@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29009.5
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GbfDiscordApp", "GbfDiscordApp\GbfDiscordApp.csproj", "{65834BF8-E76D-4603-802F-058A2A03EC43}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GbfDiscordAppCs", "GbfDiscordApp\GbfDiscordAppCs.csproj", "{65834BF8-E76D-4603-802F-058A2A03EC43}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GbfWeb", "GbfWeb\GbfWeb.csproj", "{CE314ACD-332A-4B82-89BD-6FF281AB5C57}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GbfWeb", "GbfWeb\GbfWeb.csproj", "{CE314ACD-332A-4B82-89BD-6FF281AB5C57}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,9 +1,9 @@
 ﻿using System.Threading.Tasks;
 
-namespace GbfDiscordApp.Discord.Command
+namespace GbfDiscordAppCs.Discord.Command
 {
     public interface ICommandcs
     {
-        Task Exec();
+        Task ExecAsync();
     }
 }

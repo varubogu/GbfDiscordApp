@@ -10,7 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 using Discord;
 
-namespace GbfDiscordApp
+namespace GbfDiscordAppCs
 {
     class Program
     {

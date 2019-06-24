@@ -1,12 +1,12 @@
 ﻿using Discord.Commands;
 using System.Threading.Tasks;
 
-namespace GbfDiscordApp.Discord.Command
+namespace GbfDiscordAppCs.Discord.Command
 {
     public class Hello : ModuleBase, ICommandcs
     {
         [Command("hello")]
-        public async Task Exec()
+        public async Task ExecAsync()
         {
             string message = "Hello!";
             System.Console.WriteLine(message);

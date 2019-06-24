@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace GbfDiscordApp.Discord
+namespace GbfDiscordAppCs.Discord
 {
     /// <summary>
     /// DiscordBotクラスのオプションファイルです。<br></br>
@@ -22,9 +22,10 @@ namespace GbfDiscordApp.Discord
         const char COMMAND_PREFIX = '$';
 
         /// <summary>
-        /// ボットのトークンを指定します。
-        /// 公式ドキュメントにもありますが、
-        /// トークンはくれぐれも流出せぬようご注意ください。
+        /// ボットのトークンを指定します。<br></br>
+        /// 公式ドキュメントにもありますが、<br></br>
+        /// トークンはくれぐれも流出せぬようご注意ください。<br></br>
+        /// 誤ってコミットも無いように。<br></br>
         /// </summary>
         const string BOT_TOKEN = "ここにトークン";
     }

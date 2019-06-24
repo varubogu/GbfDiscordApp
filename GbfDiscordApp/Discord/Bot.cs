@@ -10,7 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 using Discord;
 
-namespace GbfDiscordApp.Discord
+namespace GbfDiscordAppCs.Discord
 {
     /// <summary>
     /// Discord Botの本体クラスです。<br></br>
@@ -23,13 +23,7 @@ namespace GbfDiscordApp.Discord
         readonly DiscordSocketClient _Client = new DiscordSocketClient();
         readonly CommandService _Commands = new CommandService();
         readonly IServiceProvider _Services = new ServiceCollection().BuildServiceProvider();
-        Dictionary<string, ICommandContext> _cmd = new Dictionary<string, ICommandContext>();
         #endregion
-
-        public Bot()
-        {
-            Console.WriteLine("botbot");
-        }
 
         /// <summary>
         /// 起動時処理
@@ -75,23 +69,12 @@ namespace GbfDiscordApp.Discord
 
                 int argPos = 0;
 
-                if (!HasPrifix(message, ref argPos))
+                if (!HasPrifixCommand(message, ref argPos))
                 {
                     return;
                 }
 
-                //var context = new CommandContext(_Client, message);
-                string m = message.ToString();
-                ICommandContext context;
-                if (_cmd.ContainsKey(m))
-                {
-                    context = _cmd[m];
-                }
-                else
-                {
-                    context = new CommandContext(_Client, message);
-                    _cmd.Add(m, context);
-                }
+                var context = new CommandContext(_Client, message);
                 var result = await _Commands.ExecuteAsync(context, argPos, _Services);
 
                 if (!result.IsSuccess)
@@ -108,7 +91,7 @@ namespace GbfDiscordApp.Discord
         /// <param name="message">メッセージ情報</param>
         /// <param name="argPos">(ref)接頭詞の文字開始位置</param>
         /// <returns>接頭詞ならtrue</returns>
-        private bool HasPrifix(SocketUserMessage message, ref int argPos)
+        private bool HasPrifixCommand(SocketUserMessage message, ref int argPos)
         {
             return (message.HasCharPrefix(COMMAND_PREFIX, ref argPos)
                 || message.HasMentionPrefix(_Client.CurrentUser, ref argPos));

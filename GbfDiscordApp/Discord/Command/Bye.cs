@@ -1,12 +1,12 @@
 ﻿using Discord.Commands;
 using System.Threading.Tasks;
 
-namespace GbfDiscordApp.Discord.Command
+namespace GbfDiscordAppCs.Discord.Command
 {
     public class Bye : ModuleBase, ICommandcs
     {
         [Command("bye")]
-        public async Task Exec()
+        public async Task ExecAsync()
         {
             string message = "bye!";
             System.Console.WriteLine(message);
